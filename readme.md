@@ -52,5 +52,7 @@ Viser detaljer om det valgte lokale:
 
 ## Demovideo
 
-Link til demovideo:
+[Se/download demovideoen](./demo/demo.mp4)
+
+Hvis videoen ikke kan forhåndsvises på GitHub, vælg "View raw" for at åbne/download den.
 
