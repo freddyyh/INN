@@ -52,7 +52,7 @@ Viser detaljer om det valgte lokale:
 
 ## Demovideo
 
-[Se/download demovideoen](./DEMO/INN-DEMO vid.mp4)
+[Se/download demovideoen](./DEMO/INN-DEMO-vid.mp4)
 
 Hvis videoen ikke kan forhåndsvises på GitHub, vælg "View raw" for at åbne/download den.
 
