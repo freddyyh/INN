@@ -34,7 +34,15 @@ export default function HomeScreen({ navigation }) {
         title="Se alle lokaler"
         onPress={() => navigation.navigate('List')}
       />
-
+     {/* Åbner skærmen registreret som "Map" i App.js. */} 
+    <Button
+   title="Find lokaler på kort"
+    onPress={() => navigation.navigate('Map')}
+/>
+<Button
+  title="Mine favoritter"
+  onPress={() => navigation.navigate('Favorites')}
+/>
     </ScrollView>
   );
 }

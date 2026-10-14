@@ -1,13 +1,35 @@
 import React from 'react';
-import { View, Text, ScrollView } from 'react-native';
-
+import { View, Text, ScrollView, Alert } from 'react-native';
+import { useFavorites } from '../context/favorit';
 import Button from '../components/button';
 import { styles } from '../styles/stil';
 
 export default function DetailScreen({ route, navigation }) {
-
+// Henter det lokale, som blev sendt med ved navigationen til denne skærm.
   const { lokale } = route.params;
+const {
+  favoritter,
+  indlaeser,
+  gemmer,
+  fejl,
+  hentFavoritter,
+  skiftFavorit,
+} = useFavorites();
 
+const erFavorit = favoritter.includes(lokale.id);
+
+async function handleFavorit() {
+  if (indlaeser || gemmer || fejl) return;
+
+  try {
+    await skiftFavorit(lokale.id);
+  } catch {
+    Alert.alert(
+      'Kunne ikke gemme',
+      'Ændringen blev ikke gemt. Prøv igen.'
+    );
+  }
+}
   return (
     <ScrollView contentContainerStyle={styles.container}>
 
@@ -83,7 +105,34 @@ export default function DetailScreen({ route, navigation }) {
 
 
       </View>
+{fejl ? (
+  <View>
+    <Text style={styles.description}>{fejl}</Text>
 
+    <Button
+      title="Hent favoritter igen"
+      onPress={hentFavoritter}
+    />
+  </View>
+) : (
+  <Button
+    title={
+      indlaeser
+        ? 'Henter favoritter...'
+        : gemmer
+          ? 'Gemmer...'
+          : erFavorit
+            ? 'Fjern favorit'
+            : 'Gem som favorit'
+    }
+    onPress={handleFavorit}
+  />
+)}
+
+<Button
+  title="Mine favoritter"
+  onPress={() => navigation.navigate('Favorites')}
+/>
       <Button
         title="Tilbage til alle lokaler"
         onPress={() => navigation.navigate('List')}

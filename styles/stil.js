@@ -206,4 +206,45 @@ detailTitle: {
   color: '#2F5D50',
   paddingRight: 10,
 },
+  mapContainer: {
+    flex: 1,
+    backgroundColor: '#F5F7F6',
+  },
+
+  mapIntro: {
+    padding: 15,
+    fontSize: 15,
+    color: '#2F5D50',
+  },
+
+  map: {
+      width: '100%',
+       height: 400,
+
+  },
+
+  mapPanel: {
+    flexGrow: 0,
+    maxHeight: '45%',
+    backgroundColor: '#FFFFFF',
+  },
+
+  mapPanelContent: {
+    padding: 20,
+  },
+
+  mapDisclaimer: {
+    fontSize: 12,
+    color: '#666666',
+    marginTop: 10,
+  }
 });
+export const navigationOptions = {
+  headerStyle: {
+    backgroundColor: '#2F5D50',
+  },
+  headerTintColor: '#FFFFFF',
+  headerTitleStyle: {
+    fontWeight: 'bold',
+  },
+};
