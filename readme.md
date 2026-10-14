@@ -90,7 +90,7 @@ forklaringer og fejlfinding.
 
 ## Ny Demovideo - godkendelsesopgave 2
 
-[Se demovideo af den opdaterede app](INDSÆT-LINK-TIL-NY-DEMOVIDEO)
+[Se demovideo af den opdaterede app](https://github.com/freddyyh/INN/blob/main/DEMO/INN-DEMO-vid2.mp4)
 
 Videoen demonstrerer navigation, kortvisning samt lagring
 og fjernelse af favoritter.
